@@ -4464,3 +4464,76 @@ img {
   min-height: 0 !important;
   padding: 0 !important;
 }
+
+/* ============================================================
+   ULTIMATE MOBILE POLISH (STRUCTURE & PREMIUM UX)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* 1. Header & Trust Strip Polish */
+  .trust-strip { 
+    flex-direction: column !important; 
+    font-size: 0.75rem !important; 
+    padding: 8px 15px !important; 
+    gap: 5px !important; 
+  }
+  .trust-strip span { border-right: none !important; padding: 0 !important; }
+  .main-header { padding: 12px 15px !important; }
+  .logo { font-size: 1.5rem !important; }
+
+  /* 2. Typography Scaling (Prevent Giant Text) */
+  .hero-title { font-size: 2.6rem !important; line-height: 1.15 !important; margin-bottom: 15px !important; }
+  .hero-sub { font-size: 1.05rem !important; padding: 0 10px !important; margin-bottom: 30px !important; line-height: 1.5 !important; }
+  .section-title { font-size: 2.2rem !important; line-height: 1.2 !important; padding: 0 15px !important; margin-bottom: 10px !important; }
+  .section-sub { font-size: 1rem !important; margin-bottom: 30px !important; }
+
+  /* 3. Container Padding (Tighter and Cleaner) */
+  section { padding: 50px 15px !important; }
+  #hero, .trendy-hero { padding-top: 130px !important; padding-bottom: 60px !important; min-height: auto !important; height: auto !important;}
+
+  /* 4. Perfect Swipeable Rows (Categories & Specials) */
+  .category-row-final, .specials-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 15px !important;
+    padding-bottom: 20px !important; /* Space for shadow */
+    -webkit-overflow-scrolling: touch !important;
+    margin: 0 -15px !important; /* Bleed to edge of screen */
+    padding: 10px 15px 30px 15px !important; /* Restore padding on edges */
+    scrollbar-width: none !important; /* Hide scrollbar Firefox */
+  }
+  .category-row-final::-webkit-scrollbar, .specials-grid::-webkit-scrollbar { display: none !important; } /* Hide scrollbar Chrome/Safari */
+  
+  /* Make cards 85% width so the next one peeks out, hinting at swipeability */
+  .category-card-final, .special-card {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center !important;
+  }
+
+  /* 5. Clean Grid Stacking (Experience & Why Buy) */
+  .exp-grid, .features-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important;
+  }
+  .exp-col-1, .exp-col-3, .exp-side { width: 100% !important; max-width: 100% !important; }
+  .glass-card { padding: 25px 20px !important; }
+  
+  /* 6. Gallery Polish */
+  .parallax-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .plx-frame { height: 160px !important; border-radius: 12px !important; }
+  
+  /* 7. Buttons & Bottom Popup Polish */
+  .hero-btns { flex-direction: column !important; width: 100% !important; gap: 15px !important; padding: 0 20px !important; }
+  .hero-btns a { width: 100% !important; text-align: center !important; padding: 15px !important; }
+  .premium-bottom-bar { right: 15px !important; bottom: 15px !important; padding: 8px !important; }
+  .premium-bottom-bar .btn-whatsapp { font-size: 1.1rem !important; padding: 14px 22px !important; }
+}
