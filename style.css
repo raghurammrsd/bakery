@@ -4405,3 +4405,39 @@ img {
   justify-content: center !important;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
 }
+
+/* ============================================================
+   MOVE POPUP TO BOTTOM RIGHT
+   ============================================================ */
+
+.premium-bottom-bar {
+  left: auto !important;
+  right: 25px !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: 90vw !important;
+  gap: 15px !important;
+  padding: 10px 10px 10px 25px !important; /* Asymmetrical padding so the button feels integrated */
+}
+
+/* Ensure the close button is still in a good spot */
+.premium-bottom-bar .modal-close {
+  top: -10px !important;
+  right: -10px !important;
+}
+
+/* On mobile, make it a super sleek floating button on the right by hiding the extra text */
+@media (max-width: 768px) {
+  .premium-bottom-bar {
+    right: 15px !important;
+    bottom: 15px !important;
+    padding: 8px !important; /* Tighter padding around just the button */
+  }
+  .premium-bottom-bar .bar-text {
+    display: none !important; /* Hide "Customise your cake" so it's a pure CTA */
+  }
+  .premium-bottom-bar .btn-whatsapp {
+    font-size: 1.1rem !important;
+    padding: 12px 25px !important;
+  }
+}
