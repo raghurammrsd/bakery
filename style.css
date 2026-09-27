@@ -3418,3 +3418,123 @@ h1, h2, h3, h4 {
 @keyframes shineText {
   to { background-position: 200% center; }
 }
+
+/* ============================================================
+   ULTRA 3D PREMIUM "WHY BUY FROM US" SECTION
+   ============================================================ */
+
+/* Stage Setup for 3D Cards */
+.why-right {
+  display: flex !important;
+  gap: 30px !important;
+  align-items: center !important;
+  perspective: 1200px !important; /* The 3D Camera */
+  transform-style: preserve-3d !important;
+  padding: 40px 0 !important;
+}
+
+/* Base Card Reset */
+.route-box {
+  border-radius: 24px !important;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border: none !important;
+  position: relative !important;
+}
+
+/* 1. TRADITIONAL ROUTE (The "Bad" Route) */
+.route-box.traditional {
+  background: #f5f5f5 !important;
+  transform: scale(0.9) translateZ(-50px) rotateY(15deg) !important; /* Pushed back, tilted away */
+  opacity: 0.6 !important;
+  filter: grayscale(0.8) !important;
+  box-shadow: -10px 20px 30px rgba(0,0,0,0.05), inset 0 0 20px rgba(0,0,0,0.02) !important;
+}
+.route-box.traditional:hover {
+  opacity: 0.9 !important;
+  transform: scale(0.95) translateZ(-20px) rotateY(5deg) !important;
+}
+.route-box.traditional .route-header {
+  background: #777 !important;
+  border-radius: 24px 24px 0 0 !important;
+}
+
+/* 2. OUR ROUTE (The "Premium 3D" Route) */
+.route-box.our-route {
+  background: linear-gradient(145deg, #ffffff, #fffaf0) !important;
+  transform: scale(1.15) translateZ(40px) rotateY(-5deg) !important; /* Popping out, tilted towards user */
+  box-shadow: 
+    -30px 40px 70px rgba(61, 31, 0, 0.2), /* Massive deep shadow */
+    0 0 0 2px #c18f59, /* Elegant gold trim */
+    inset 0 0 30px rgba(255,255,255,1) !important; /* Inner highlight */
+  z-index: 10 !important;
+}
+.route-box.our-route::before {
+  content: '';
+  position: absolute;
+  top: -10%; left: -10%;
+  width: 120%; height: 120%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  animation: pulseGold 3s infinite alternate;
+}
+.route-box.our-route .route-header {
+  background: linear-gradient(135deg, #3d1f00, #7a2800) !important;
+  border-radius: 24px 24px 0 0 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+.route-box.our-route:hover {
+  transform: scale(1.2) translateZ(60px) rotateY(0deg) !important;
+  box-shadow: -40px 50px 90px rgba(61, 31, 0, 0.25), 0 0 0 2px #c18f59 !important;
+}
+
+@keyframes pulseGold {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* 3. 3D FEATURE ICONS (Left Side) */
+.why-icon-circle {
+  width: 60px !important;
+  height: 60px !important;
+  background: linear-gradient(135deg, #ffffff, #f3ebd8) !important;
+  border-radius: 50% !important;
+  box-shadow: 
+    10px 10px 20px rgba(61, 31, 0, 0.08), 
+    -10px -10px 20px rgba(255,255,255,1), 
+    inset 2px 2px 5px rgba(255,255,255,1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 15px !important;
+  animation: floatOrb 4s infinite alternate ease-in-out !important;
+}
+
+.why-item:nth-child(2) .why-icon-circle { animation-delay: -1s !important; }
+.why-item:nth-child(3) .why-icon-circle { animation-delay: -2s !important; }
+.why-item:nth-child(4) .why-icon-circle { animation-delay: -3s !important; }
+
+@keyframes floatOrb {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.05); box-shadow: 15px 25px 30px rgba(61, 31, 0, 0.1), -10px -10px 20px rgba(255,255,255,1); }
+}
+
+/* Mobile Fix for 3D Stage */
+@media (max-width: 1024px) {
+  .why-right {
+    flex-direction: column !important;
+    perspective: none !important;
+    transform-style: flat !important;
+  }
+  .route-box.traditional {
+    transform: scale(0.95) !important;
+    opacity: 0.8 !important;
+  }
+  .route-box.our-route {
+    transform: scale(1.05) !important;
+    margin-top: 10px !important;
+  }
+}
