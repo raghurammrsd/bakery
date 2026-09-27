@@ -4441,3 +4441,25 @@ img {
     padding: 12px 25px !important;
   }
 }
+
+/* ============================================================
+   FIX ENORMOUS HERO GAP (VIEWPORT ZOOM BUG FIX)
+   ============================================================ */
+
+/* Remove all 100vh constraints which break when zoomed out on mobile */
+#hero, .trendy-hero {
+  height: auto !important;
+  min-height: 550px !important;
+  padding-top: 150px !important; /* Proper breathing room below the navbar */
+  padding-bottom: 80px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.hero-inner-wrapper {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
