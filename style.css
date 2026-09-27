@@ -3338,3 +3338,83 @@ h1, h2, h3, h4 {
 
 /* Hide the old static auras */
 #hero::before, #hero::after { display: none !important; }
+
+/* ============================================================
+   REFINEMENTS: RR BAKERY, HEADER, TRUST STRIP & COLOR
+   ============================================================ */
+
+/* 1. Reduce Header Size */
+.nav-inner {
+  padding: 10px 24px !important;
+  min-height: 60px !important;
+  align-items: center !important;
+}
+.navbar {
+  padding: 0 !important;
+  background: rgba(253, 244, 227, 0.8) !important;
+  backdrop-filter: blur(15px) !important;
+}
+
+/* 2. Excellent Logo Typography */
+.logo {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+}
+.logo-rr {
+  font-family: "Playfair Display", serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -1px !important;
+  /* Beautiful Vibrant Gradient */
+  background: linear-gradient(135deg, #ff3366, #ff7b00) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.logo-bakery {
+  font-family: "Playfair Display", serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: #3d1f00 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* 3. Center the 4-Word Trust Strip */
+.trust-strip-glass {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important; /* Perfect Center */
+  align-items: center !important;
+  gap: 30px !important;
+  margin: 40px auto 0 !important;
+  width: 100% !important;
+  border-top: 1px solid rgba(61, 31, 0, 0.1) !important;
+  padding-top: 25px !important;
+}
+
+/* 4. Inject Colorful 3D "Coolness" to the background */
+/* We update the blob colors to be way more vibrant and cool */
+.blob-1 {
+  background: rgba(255, 123, 0, 0.35) !important; /* Vibrant Orange */
+}
+.blob-2 {
+  background: rgba(255, 51, 102, 0.25) !important; /* Hot Pink/Magenta */
+}
+.blob-3 {
+  background: rgba(0, 204, 255, 0.25) !important; /* Electric Blue/Teal */
+}
+
+/* Add a gorgeous gradient to the main Hero Text to match the cool vibe */
+.hero-content-glass h1 {
+  background: linear-gradient(135deg, #3d1f00 20%, #7a2800 50%, #3d1f00 80%) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shineText 6s linear infinite !important;
+}
+
+@keyframes shineText {
+  to { background-position: 200% center; }
+}
