@@ -709,6 +709,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; line-height: 1.15; letter-spa
   align-items: center;
   transition: transform 0.3s ease;
 }
+}
 
 @media (min-width: 1024px) {
   .nav-links { display: flex; }
