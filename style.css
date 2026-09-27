@@ -4050,3 +4050,40 @@ h1, h2, h3, h4 {
     text-align: center !important;
   }
 }
+
+/* ============================================================
+   FIX: GUARANTEE SPECIALS GRID VISIBILITY ON DESKTOP
+   ============================================================ */
+
+.specials-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto 0 auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.special-card {
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 200px !important;
+}
+
+/* Ensure the wrapper doesn't collapse */
+#specials {
+  height: auto !important;
+  min-height: 400px !important;
+  overflow: visible !important; /* Remove hidden just in case it was clipping them out */
+}
+
+/* 4. Flawless Mobile Friendly Swipe Row (Ensure desktop doesn't bleed in) */
+@media (max-width: 1024px) {
+  .specials-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+  }
+}
