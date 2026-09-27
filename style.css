@@ -3599,3 +3599,76 @@ h1, h2, h3, h4 {
   50% { background-position: 100% 50%; transform: scale(1.15); }
   100% { background-position: 0% 50%; transform: scale(1.05); }
 }
+
+/* ============================================================
+   TRUE PROFESSIONAL, LUXURY REDESIGN (REMOVING "AI" NEON GIMMICKS)
+   ============================================================ */
+
+/* 1. Reset the Stage (Kill the gimmicky 3D perspective) */
+.why-right {
+  perspective: none !important;
+  transform-style: flat !important;
+  gap: 15px !important;
+}
+
+/* 2. Professional, Minimal Feature Icons */
+.why-icon-circle {
+  background: #ffffff !important;
+  border: 1px solid #eaddc7 !important;
+  box-shadow: 0 8px 16px rgba(61, 31, 0, 0.04) !important;
+  animation: none !important; /* Stop the bouncy floating */
+  color: #3d1f00 !important;
+  text-shadow: none !important;
+  transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.why-item:hover .why-icon-circle {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 24px rgba(61, 31, 0, 0.08) !important;
+  border-color: #c18f59 !important;
+}
+
+/* 3. Clean "Traditional Route" Card */
+.route-box.traditional {
+  background: #fdfaf5 !important;
+  border: 1px solid #eaddc7 !important;
+  transform: scale(0.95) !important;
+  opacity: 0.8 !important;
+  filter: none !important; /* Remove harsh grayscale */
+  box-shadow: none !important;
+  z-index: 1 !important;
+}
+.route-box.traditional .route-header {
+  background: #f0e6d2 !important;
+  color: #7a6b58 !important;
+  text-shadow: none !important;
+  border-radius: 23px 23px 0 0 !important;
+}
+.route-box.traditional:hover {
+  opacity: 1 !important;
+  transform: scale(0.95) !important;
+}
+
+/* 4. Luxurious "Our Route" Premium Card */
+.route-box.our-route {
+  background: #ffffff !important;
+  border: 1px solid #c18f59 !important;
+  transform: scale(1.05) !important; /* Clean, flat pop */
+  box-shadow: 0 20px 40px rgba(61, 31, 0, 0.08) !important;
+  z-index: 2 !important;
+}
+.route-box.our-route .route-header {
+  background: #3d1f00 !important; /* Deep, rich chocolate brown */
+  color: #ffffff !important;
+  letter-spacing: 1px !important;
+  text-shadow: none !important;
+  border-radius: 23px 23px 0 0 !important;
+}
+.route-box.our-route::before {
+  display: none !important; /* Completely kill the rainbow aura */
+}
+.route-box.our-route:hover {
+  transform: scale(1.06) !important; /* Very subtle luxury lift */
+  box-shadow: 0 25px 50px rgba(61, 31, 0, 0.12) !important;
+}
