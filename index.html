@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweeto's Bakery — Premium Direct Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="background-3d-wrap">
+  <div class="blob-3d blob-1"></div>
+  <div class="blob-3d blob-2"></div>
+  <div class="blob-3d blob-3"></div>
+</div>
+
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span>Sweeto's <em>Bakery</em></span>
+    </a>
+    
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20order%20from%20Sweeto%27s%20Bakery!" target="_blank" class="btn-whatsapp nav-wa">
+      <span class="wa-dot"></span> Order Now
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    
+    
+    
+    <a href="#gallery">Gallery</a>
+    <a href="https://wa.me/919876543210" target="_blank" class="btn-whatsapp">Order Now</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<!-- ============================================================
+     HERO (ULTRA TRENDY & GLOSSY)
+     ============================================================ -->
+<section id="hero" class="trendy-hero">
+
+  <!-- EPIC 3D CAKE SHOWCASE -->
+  <div class="hero-3d-showcase">
+    <!-- Glowing background aura -->
+    <div class="cake-aura"></div>
+    
+    <!-- Floating 3D Cake -->
+    <img src="assets/images/cake-unicorn.png" class="epic-floating-cake" alt="Premium 3D Cake" />
+    
+    <!-- Floating foreground glass elements for depth of field -->
+    <div class="glass-float float-sm1"></div>
+    <div class="glass-float float-sm2"></div>
+    <div class="glass-float float-md"></div>
+  </div>
+
+
+  
+
+  
+    
+  </div>
+
+  <!-- MAGIC HERO WRAPPER -->
+  <div class="section-inner hero-inner-wrapper">
+    <div class="hero-content-glass">
+    <div class="hero-badge-glossy">DIRECT FROM OUR BAKERY</div>
+    <h1 class="hero-title">
+      Made Fresh.<br/>
+      Made By Us.<br/>
+      Made For You.
+    </h1>
+    <p class="hero-sub">
+      Cakes, Puffs, Biscuits, Pastries, Breads &amp; More —<br/>
+      direct from our bakery with better quality and customisation.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20order!" target="_blank" class="btn-whatsapp-glossy">
+        <span class="wa-dot-glow"></span> Order on WhatsApp
+      </a>
+      <a href="#gallery" class="btn-outline-glossy">View Our Work</a>
+    </div>
+
+    <div class="trust-strip-glass">
+      <div class="trust-item"><span>Direct Manufacturer</span></div>
+      <div class="trust-item"><span>Freshly Made</span></div>
+      <div class="trust-item"><span>Custom Orders</span></div>
+      <div class="trust-item"><span>Bulk Event Orders</span></div>
+    </div>
+  </div>
+
+    </div>
+</section>
+
+<!-- ============================================================
+     WHAT ARE YOU LOOKING FOR
+     ============================================================ -->
+
+<!-- ============================================================
+     WHAT ARE YOU LOOKING FOR
+     ============================================================ -->
+<section id="looking-for" style="padding: 60px 0;">
+  <div class="section-inner">
+    <h2 class="section-title" style="text-align: center; font-size: 2.8rem; margin-bottom: 5px;">What are you looking for?</h2>
+    <p class="section-sub" style="text-align: center; margin-bottom: 40px;">Find exactly what you need</p>
+    
+    <div class="category-row-final">
+      <!-- Card 1 -->
+      <div class="category-card-final" data-wa="Cakes">
+        <img src="assets/images/cake7.jpg" alt="Cakes">
+        <div class="category-info-final">
+          <h3>Cakes</h3>
+          <p>Birthday, Wedding & Custom Cakes</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="category-card-final" data-wa="Puffs">
+        <img src="assets/images/cake21.jpeg" alt="Puffs">
+        <div class="category-info-final">
+          <h3>Puffs & Pastries</h3>
+          <p>Fresh & Flavourful Varieties</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="category-card-final" data-wa="Biscuits">
+        <img src="assets/images/cake22.jpeg" alt="Biscuits">
+        <div class="category-info-final">
+          <h3>Biscuits & Cookies</h3>
+          <p>Baked with Quality Ingredients</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="category-card-final" data-wa="Breads">
+        <img src="assets/images/cake18.jpeg" alt="Breads">
+        <div class="category-info-final">
+          <h3>Breads</h3>
+          <p>Fresh Breads for Everyday Needs</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="category-card-final" data-wa="Snacks">
+        <img src="assets/images/cake23.jpeg" alt="Snacks">
+        <div class="category-info-final">
+          <h3>Snacks</h3>
+          <p>Muffins, Donuts & More</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="category-card-final" data-wa="Party Orders">
+        <img src="assets/images/cake15.jpeg" alt="Party Orders">
+        <div class="category-info-final">
+          <h3>Party & Event Orders</h3>
+          <p>Bulk Orders for Every Occasion</p>
+          <div class="cat-arrow-final">➔</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY BUY DIRECT
+     ============================================================ -->
+<section id="why-direct" style="padding-top: 20px;">
+  
+  <div class="confetti-wrap">
+    <div class="sq sq-1"></div>
+    <div class="sq sq-2"></div>
+    <div class="sq sq-3"></div>
+    <div class="sq sq-4"></div>
+    <div class="sq sq-5"></div>
+    <div class="sq sq-6"></div>
+    <div class="sq sq-7"></div>
+    <div class="sq sq-8"></div>
+  </div>
+  <div class="section-inner why-flex">
+
+    <div class="why-left">
+      <h2 class="section-title" style="text-align: left; font-size: 2.5rem; margin-bottom: 5px;">Why Buy From Us Directly?</h2>
+      <p class="section-sub" style="text-align: left; margin-bottom: 40px; margin-left: 0;">Get bakery products directly from the people who actually make them.</p>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon-circle">🏭</div>
+          <h3>Direct From<br/>Manufacturer</h3>
+          <p>No unnecessary<br/>middlemen.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-circle">🍃</div>
+          <h3>Better Quality</h3>
+          <p>Freshly made with<br/>quality ingredients.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-circle">🎂</div>
+          <h3>Full Customization</h3>
+          <p>Your size, flavour,<br/>design and quantity.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-circle">🛒</div>
+          <h3>Special Offers</h3>
+          <p>Direct pricing and<br/>exclusive deals.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="why-right">
+      <div class="route-box traditional">
+        <div class="route-header">Traditional Route</div>
+        <div class="route-flow">
+          <span>Manufacturer</span>
+          <span class="arr">↓</span>
+          <span>Distributor</span>
+          <span class="arr">↓</span>
+          <span>Shop / Retailer</span>
+          <span class="arr">↓</span>
+          <span style="font-weight:700;">Customer</span>
+        </div>
+      </div>
+      <div class="route-box our-route">
+        <div class="route-header">Our Route</div>
+        <div class="route-flow">
+          <span style="font-weight:700;">Our Bakery</span>
+          <span style="font-size:0.75rem;">(Manufacturer)</span>
+          <span class="arr">↓</span>
+          <div class="route-heart" style="font-size:1.5rem; margin:10px 0;">👨‍👩‍👧 ❤️</div>
+          <p style="font-size:0.8rem; font-weight:600;">More direct. More fresh.<br/>More customization.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<!-- ============================================================
+     OUR WORK (PARALLAX)
+     ============================================================ -->
+<section id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title text-center">Our Work & Creations</h2>
+    <p class="section-sub text-center" style="margin-bottom: 50px;">Explore our custom cake designs.</p>
+    
+    <div class="parallax-grid">
+      <div class="plx-frame"><img src="assets/images/cake3.jpg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake4.jpg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake5.jpg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake6.jpg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake7.jpg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake-butterfly.png" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake-unicorn.png" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake10.jpeg" class="plx-img" alt="Cake"></div>
+      <div class="plx-frame"><img src="assets/images/cake3.jpg" class="plx-img" alt="Cake"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BULK ORDERS (NEW)
+     ============================================================ -->
+<section id="bulk-new" class="bottom-section">
+  <div class="section-inner">
+    <div class="bulk-grid">
+      <div class="bulk-left">
+        <h2 class="bottom-title ">Need Bulk Orders?</h2>
+        <p class="bottom-sub ">We handle bulk requirements for events, businesses and more.</p>
+        <div class="bulk-icons">
+          <div class="b-icon ">
+            <span class="icon-emoji">💍</span>
+            <small>Weddings</small>
+          </div>
+          <div class="b-icon ">
+            <span class="icon-emoji">🎂</span>
+            <small>Birthdays</small>
+          </div>
+          <div class="b-icon ">
+            <span class="icon-emoji">🏢</span>
+            <small>Corporate<br>Events</small>
+          </div>
+          <div class="b-icon ">
+            <span class="icon-emoji">🎓</span>
+            <small>Schools &<br>Colleges</small>
+          </div>
+          <div class="b-icon ">
+            <span class="icon-emoji">🎉</span>
+            <small>Parties &<br>Functions</small>
+          </div>
+          <div class="b-icon ">
+            <span class="icon-emoji">🏪</span>
+            <small>Cafés &<br>Retailers</small>
+          </div>
+        </div>
+      </div>
+      <div class="bulk-right">
+        <img src="assets/images/cake21.jpeg" alt="Bulk Pastries" class="bulk-img">
+        <div class="bulk-quote glass-card ">
+          <h3>50? 100? 500?<br>We Can Make It.</h3>
+          <p>Tell us what you need and we'll prepare it according to your requirements.</p>
+          <a href="https://wa.me/919876543210?text=I%20need%20a%20bulk%20quote!" target="_blank" class="btn-dark-brown">
+            <span class="wa-icon">💬</span> Request Bulk Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TODAY'S SPECIALS
+     ============================================================ -->
+<section id="specials" class="bottom-section">
+  <div class="section-inner">
+    <div class="specials-header">
+      <div>
+        <h2 class="bottom-title ">Today's Bakery Specials</h2>
+        <p class="bottom-sub ">Check out our latest offers and combos.</p>
+      </div>
+      <a href="#" class="btn-outline-small">View All Offers ➔</a>
+    </div>
+    
+    <div class="specials-grid">
+      <!-- Card 1 -->
+      <div class="special-card ">
+         <div class="sc-content">
+           <h3>Birthday Special</h3>
+           <p>Custom Cake + 20 Puffs<br>+ 20 Biscuits</p>
+           <a href="#" class="sc-link">Ask for Offer ➔</a>
+         </div>
+         <img src="assets/images/cake7.jpg" alt="Cake">
+      </div>
+      <!-- Card 2 -->
+      <div class="special-card ">
+         <div class="sc-content">
+           <h3>Party Pack</h3>
+           <p>50 Puffs + 50 Biscuits<br>+ 1 kg Cake</p>
+           <a href="#" class="sc-link">Ask for Offer ➔</a>
+         </div>
+         <img src="assets/images/cake21.jpeg" alt="Puffs">
+      </div>
+      <!-- Card 3 -->
+      <div class="special-card ">
+         <div class="sc-content">
+           <h3>Family Combo</h3>
+           <p>Assorted Bakery Box<br>for Every Occasion</p>
+           <a href="#" class="sc-link">Ask for Offer ➔</a>
+         </div>
+         <img src="assets/images/cake18.jpeg" alt="Combo Box">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MADE WITH EXPERIENCE
+     ============================================================ -->
+<section id="experience" class="bottom-section" style="margin-bottom: 60px;">
+  <div class="section-inner exp-grid">
+     <div class="exp-col-1 ">
+        <img src="assets/images/cake17.jpeg" alt="Baker">
+     </div>
+     
+     <div class="exp-col-2">
+        <h2 class="bottom-title ">Made With Experience.<br>Served With Care.</h2>
+        <p>Our bakery has been making fresh and delicious bakery products for our customers with a focus on quality, hygiene and customer satisfaction. From custom cakes to everyday bakery items, we take pride in crafting products that bring happiness to your special moments.</p>
+        <a href="#" class="btn-dark-brown-small">Our Story ➔</a>
+     </div>
+     
+     <div class="exp-col-3">
+        <div class="exp-side ">
+           <img src="assets/images/cake19.jpeg" alt="Our Bakery">
+           <small>Our Bakery</small>
+        </div>
+        <div class="exp-side ">
+           <img src="assets/images/cake20.jpeg" alt="Our Team">
+           <small>Our Team</small>
+        </div>
+     </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Customizer Modal -->
+<div class="modal-overlay" id="customizerModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h3>Customise Your Cake</h3>
+    <p>Scroll down to our cake builder or WhatsApp us directly!</p>
+    <a href="#custom" class="btn-outline" onclick="closeCustomizer()">Cake Builder</a>
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20customise%20a%20cake!" target="_blank" class="btn-whatsapp">WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- GSAP for premium animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
