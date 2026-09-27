@@ -3933,3 +3933,120 @@ h1, h2, h3, h4 {
   position: relative;
   z-index: 1;
 }
+
+/* ============================================================
+   COLORFUL & BEAUTIFUL "TODAY'S SPECIALS" SECTION
+   ============================================================ */
+
+/* 1. Cool & Colorful Animated Background */
+#specials {
+  background: linear-gradient(-45deg, #ffbaba, #ffdac1, #e2f0cb, #b5ead7) !important;
+  background-size: 300% 300% !important;
+  animation: specialGradient 12s ease infinite !important;
+  padding: 80px 20px !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px !important; /* Soften the entire section */
+  margin: 20px !important;
+  box-shadow: inset 0 0 50px rgba(255,255,255,0.5) !important;
+}
+
+@keyframes specialGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Make headers pop against the color */
+#specials .section-title, 
+#specials .section-sub {
+  color: #3d1f00 !important;
+  text-shadow: 0 2px 10px rgba(255,255,255,0.8) !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* 2. Stunning Glassmorphic Cards (Desktop) */
+.special-card {
+  display: flex !important;
+  flex-direction: row !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(15px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 28px !important;
+  padding: 25px !important;
+  align-items: center !important;
+  box-shadow: 0 15px 35px rgba(61, 31, 0, 0.05), inset 0 0 20px rgba(255,255,255,0.8) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Beautiful Rounded Images inside Cards */
+.special-card img {
+  width: 130px !important;
+  height: 130px !important;
+  border-radius: 50% !important; /* Perfect circles for bakery items */
+  object-fit: cover !important;
+  margin-left: 20px !important;
+  box-shadow: 0 15px 25px rgba(61, 31, 0, 0.15) !important;
+  border: 4px solid #ffffff !important;
+  transition: transform 0.5s ease !important;
+  position: static !important; /* Reset any weird absolute positioning */
+  clip-path: none !important; /* Remove the old slanted mask */
+}
+
+.sc-content {
+  flex: 1 !important;
+  text-align: left !important;
+}
+.sc-content h3 { font-size: 1.4rem !important; margin-bottom: 5px !important; color: #3d1f00 !important; }
+.sc-content p { font-size: 0.9rem !important; color: #5a3c1e !important; }
+
+/* 3. Hover Effects */
+.special-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 20px 40px rgba(61, 31, 0, 0.1), inset 0 0 20px rgba(255,255,255,1) !important;
+}
+.special-card:hover img {
+  transform: rotate(5deg) scale(1.1) !important; /* Playful tilt on hover */
+}
+
+/* 4. Flawless Mobile Friendly Swipe Row */
+@media (max-width: 1024px) {
+  #specials {
+    margin: 10px !important;
+    padding: 50px 10px !important;
+    border-radius: 24px !important;
+  }
+  .specials-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 25px !important;
+    gap: 20px !important;
+    scrollbar-width: none;
+  }
+  .specials-grid::-webkit-scrollbar { display: none; }
+  
+  .special-card {
+    flex: 0 0 80% !important;
+    scroll-snap-align: center;
+    flex-direction: column-reverse !important; /* Image goes to top */
+    text-align: center !important;
+    padding: 30px 20px !important;
+  }
+  .special-card img {
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .sc-content {
+    text-align: center !important;
+  }
+}
