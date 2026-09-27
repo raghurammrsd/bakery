@@ -4252,3 +4252,22 @@ h1, h2, h3, h4 {
     gap: 30px !important;
   }
 }
+
+/* ============================================================
+   FIX: DISABLE AUTO-ZOOM / PARALLAX IN "OUR WORK" GALLERY
+   ============================================================ */
+
+/* Force images to perfectly fit their frames without the 130% parallax stretch */
+.plx-img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  transform: none !important; /* Kills the automatic GSAP parallax movement */
+}
+
+/* We still keep a very subtle, clean zoom ONLY when you hover over it */
+@media (min-width: 1025px) {
+  .plx-frame:hover .plx-img {
+    transform: scale(1.08) !important; /* Clean hover zoom */
+  }
+}
