@@ -3741,3 +3741,94 @@ h1, h2, h3, h4 {
   transform: translateY(-3px) scale(1.03) !important;
   box-shadow: 0 15px 30px rgba(255, 65, 108, 0.4) !important;
 }
+
+
+/* ============================================================
+   ULTRA-PROFESSIONAL, MONOCHROMATIC 3D REDESIGN
+   ============================================================ */
+
+/* 1. Eliminate all neon/rainbow gradients globally on the icons */
+.why-icon-circle {
+  background: #ffffff !important;
+  border: 1px solid rgba(61, 31, 0, 0.1) !important;
+  box-shadow: 0 10px 20px rgba(61, 31, 0, 0.05), inset 0 -3px 10px rgba(61, 31, 0, 0.02) !important;
+  text-shadow: none !important;
+  color: #3d1f00 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.4s ease !important;
+  transform: translateY(0) !important; /* Stable */
+}
+.why-icon-circle:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(61, 31, 0, 0.1) !important;
+}
+
+/* 2. Desktop 3D Stage (Monochrome) */
+@media (min-width: 1025px) {
+  .why-right {
+    perspective: 1200px !important;
+    transform-style: preserve-3d !important;
+    display: flex !important;
+    gap: 30px !important;
+  }
+  
+  /* Traditional Route (Flat & Pushed Back) */
+  .route-box.traditional {
+    background: #fdfaf5 !important;
+    border: 1px solid rgba(61, 31, 0, 0.05) !important;
+    transform: scale(0.9) translateZ(-40px) rotateY(10deg) !important;
+    box-shadow: inset 0 0 20px rgba(61, 31, 0, 0.03) !important;
+    filter: none !important;
+  }
+  
+  /* Our Route (3D Premium Chocolate) */
+  .route-box.our-route {
+    background: #ffffff !important;
+    transform: scale(1.1) translateZ(40px) rotateY(-8deg) !important;
+    box-shadow: 
+      -30px 40px 70px rgba(61, 31, 0, 0.15), 
+      0 0 0 1px #eaddc7 !important; /* Thin premium border */
+  }
+  .route-box.our-route:hover {
+    transform: scale(1.15) translateZ(60px) rotateY(-3deg) !important;
+    box-shadow: -40px 50px 80px rgba(61, 31, 0, 0.18), 0 0 0 1px #c18f59 !important;
+  }
+}
+
+/* 3. Ensure Mobile is perfectly stable without overflowing 3D */
+@media (max-width: 1024px) {
+  .why-right {
+    perspective: none !important;
+    transform-style: flat !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .route-box.traditional {
+    transform: scale(0.95) !important;
+    background: #fcf9f2 !important;
+  }
+  .route-box.our-route {
+    transform: scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(61, 31, 0, 0.1) !important;
+  }
+}
+
+/* 4. Monochromatic Headers */
+.route-box.our-route .route-header {
+  background: #3d1f00 !important; /* Solid Dark Brown */
+  color: #ffffff !important;
+  letter-spacing: 1px !important;
+  text-shadow: none !important;
+  border-radius: 23px 23px 0 0 !important;
+}
+.route-box.traditional .route-header {
+  background: #eaddc7 !important; /* Soft Beige */
+  color: #7a6b58 !important;
+}
+
+/* 5. Kill any remaining rainbow auras globally */
+.route-box.our-route::before { display: none !important; }
+.route-box.our-route::after { display: none !important; }
+
