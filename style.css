@@ -4087,3 +4087,168 @@ h1, h2, h3, h4 {
     grid-template-columns: none !important;
   }
 }
+
+/* ============================================================
+   COLORFUL & BEAUTIFUL "EXPERIENCE" SECTION
+   ============================================================ */
+
+/* 1. Gorgeous Colorful Animated Background */
+#experience {
+  background: linear-gradient(135deg, #fdf4e3, #ffd1ff, #fad0c4, #fdf4e3) !important;
+  background-size: 300% 300% !important;
+  animation: expGradient 15s ease infinite !important;
+  padding: 80px 20px !important;
+  border-radius: 40px !important;
+  margin: 20px !important;
+  box-shadow: inset 0 0 50px rgba(255,255,255,0.6) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes expGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Glassmorphic Text Container for readability */
+.exp-col-2 {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(25px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 30px !important;
+  padding: 40px !important;
+  box-shadow: 0 20px 40px rgba(61, 31, 0, 0.05), inset 0 0 20px rgba(255,255,255,1) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-col-2 h2 {
+  color: #3d1f00 !important;
+  font-size: 2.8rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 20px !important;
+  text-shadow: 0 2px 5px rgba(255,255,255,0.8) !important;
+}
+
+.exp-col-2 p {
+  font-size: 1.1rem !important;
+  color: #5a3c1e !important;
+  line-height: 1.6 !important;
+  margin-bottom: 30px !important;
+}
+
+/* Beautiful vibrant button */
+.exp-col-2 .btn-dark-brown-small {
+  background: linear-gradient(135deg, #c18f59, #e0a96d) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  box-shadow: 0 10px 20px rgba(193, 143, 89, 0.3) !important;
+  border: none !important;
+  align-self: flex-start !important;
+  padding: 12px 25px !important;
+  font-weight: 700 !important;
+}
+.exp-col-2 .btn-dark-brown-small:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 15px 30px rgba(193, 143, 89, 0.4) !important;
+}
+
+/* 3. Premium Polaroid Image Frames */
+.exp-col-1 img, .exp-side img {
+  border: 8px solid #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 40px rgba(61, 31, 0, 0.15) !important;
+  object-fit: cover !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: #fff !important;
+}
+
+/* Add a lovely tilt effect */
+.exp-col-1 {
+  perspective: 1000px;
+}
+.exp-col-1 img {
+  transform: rotate(-3deg) !important;
+  height: 100% !important;
+  max-height: 500px !important;
+  width: 100% !important;
+}
+.exp-col-1 img:hover {
+  transform: rotate(0deg) scale(1.03) !important;
+}
+
+.exp-side {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.exp-side:nth-child(1) img {
+  transform: rotate(2deg) !important;
+}
+.exp-side:nth-child(2) img {
+  transform: rotate(-2deg) !important;
+  margin-top: 20px !important;
+}
+
+.exp-side:hover img {
+  transform: rotate(0deg) scale(1.05) !important;
+  z-index: 10;
+}
+
+/* Elegant captions */
+.exp-side small {
+  margin-top: -15px !important;
+  background: #fff !important;
+  padding: 4px 15px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+  font-weight: 700 !important;
+  color: #c18f59 !important;
+  z-index: 5 !important;
+  transform: rotate(2deg) !important;
+}
+
+/* 4. Flawless Mobile Friendly Layout */
+@media (max-width: 1024px) {
+  #experience {
+    margin: 10px !important;
+    padding: 40px 15px !important;
+    border-radius: 24px !important;
+  }
+  .exp-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .exp-col-1 img {
+    transform: rotate(0) !important;
+    max-height: 350px !important;
+  }
+  .exp-col-3 {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px !important;
+  }
+  .exp-side:nth-child(2) img {
+    margin-top: 0 !important;
+  }
+  .exp-col-2 {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 30px 20px !important;
+  }
+  .exp-col-2 .btn-dark-brown-small {
+    align-self: center !important;
+  }
+}
+@media (max-width: 600px) {
+  .exp-col-3 {
+    flex-direction: column !important; /* Stack on tiny phones */
+    gap: 30px !important;
+  }
+}
