@@ -3237,3 +3237,104 @@ h1, h2, h3, h4 {
 ::-webkit-scrollbar-track { background: var(--cream-bg); }
 ::-webkit-scrollbar-thumb { background: rgba(193, 143, 89, 0.5); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold-accent); }
+
+
+/* ============================================================
+   CENTERED HERO WITH FLUID 3D BACKGROUND
+   ============================================================ */
+
+/* Force Centered Layout */
+#hero {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  padding: 0 20px !important;
+  background-color: #FDF4E3 !important;
+}
+
+.hero-inner-wrapper {
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  order: unset !important;
+}
+
+.hero-content-glass {
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Make text huge and premium */
+.hero-content-glass h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem) !important;
+  line-height: 1.05 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-content-glass p {
+  text-align: center !important;
+  max-width: 600px !important;
+  margin: 0 auto 30px auto !important;
+  font-size: 1.2rem !important;
+}
+
+.hero-btns {
+  justify-content: center !important;
+  gap: 20px !important;
+}
+
+/* FLUID 3D ORGANIC BACKGROUND BLOBS */
+.hero-blob {
+  position: absolute !important;
+  border-radius: 50% !important;
+  filter: blur(80px) !important;
+  z-index: 0 !important;
+  animation: morphBlob 20s infinite alternate ease-in-out !important;
+  pointer-events: none !important;
+}
+
+.blob-1 {
+  width: 50vw !important; height: 50vw !important;
+  max-width: 800px !important; max-height: 800px !important;
+  background: rgba(220, 165, 100, 0.4) !important; /* Deep Gold/Brown */
+  top: -10% !important; left: -10% !important;
+}
+
+.blob-2 {
+  width: 60vw !important; height: 60vw !important;
+  max-width: 900px !important; max-height: 900px !important;
+  background: rgba(255, 230, 190, 0.6) !important; /* Soft Peach */
+  bottom: -20% !important; right: -10% !important;
+  animation-delay: -7s !important;
+}
+
+.blob-3 {
+  width: 40vw !important; height: 40vw !important;
+  max-width: 600px !important; max-height: 600px !important;
+  background: rgba(255, 255, 255, 0.7) !important; /* Bright Highlight */
+  top: 40% !important; left: 40% !important;
+  animation-delay: -14s !important;
+}
+
+@keyframes morphBlob {
+  0% { transform: scale(1) translate(0, 0) rotate(0deg); }
+  50% { transform: scale(1.3) translate(10vw, 5vw) rotate(90deg); }
+  100% { transform: scale(0.9) translate(-5vw, -10vw) rotate(180deg); }
+}
+
+/* Hide the old static auras */
+#hero::before, #hero::after { display: none !important; }
