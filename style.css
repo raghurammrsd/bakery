@@ -4572,3 +4572,37 @@ img {
   background: none !important; /* Remove the aurora gradient so video shows */
   animation: none !important;
 }
+
+
+/* ============================================================
+   PROMO VIDEO HERO (REPLACES TEXT/BACKGROUND)
+   ============================================================ */
+.promo-video-section {
+  width: 100vw !important;
+  max-width: 100% !important;
+  background-color: #FDF4E3 !important; /* Soft cream behind video if aspect ratio differs */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-top: 80px !important; /* Space for navbar */
+  margin: 0 !important;
+}
+
+.promo-video {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 85vh !important;
+  object-fit: contain !important; /* Ensures the whole video is visible without cropping */
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .promo-video-section {
+    padding-top: 70px !important; /* Tighter on mobile */
+  }
+  .promo-video {
+    width: 100vw !important;
+    max-height: auto !important; /* Let it wrap the aspect ratio perfectly */
+  }
+}
