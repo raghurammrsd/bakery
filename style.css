@@ -4611,3 +4611,39 @@ img {
     height: 100% !important; /* Ensure it covers the whole mobile section */
   }
 }
+
+/* ============================================================
+   FIX VIDEO OVERLAPPING HEADER AND EMPTY BOTTOM SPACE
+   ============================================================ */
+#navbar {
+  background: #FDF4E3 !important; /* Ensure navbar is solid so it looks distinct */
+}
+
+#hero.trendy-hero {
+  margin-top: 75px !important; /* Pushes the entire section below the header */
+  padding-top: 60px !important; /* Spacing above the text */
+  padding-bottom: 60px !important; /* Spacing below the text */
+}
+
+/* Make the video exactly match the height of the hero section */
+.hero-bg-video {
+  width: 100% !important;
+  height: 100% !important; /* Changed from 100vh to 100% */
+  top: 0 !important;
+  left: 0 !important;
+  object-fit: cover !important;
+}
+
+.video-overlay {
+  width: 100% !important;
+  height: 100% !important; /* Changed from 100vh to 100% */
+  top: 0 !important;
+  left: 0 !important;
+}
+
+@media (max-width: 768px) {
+  #hero.trendy-hero {
+    margin-top: 65px !important; /* Mobile header is slightly smaller */
+    padding-top: 40px !important;
+  }
+}
