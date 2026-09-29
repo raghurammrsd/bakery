@@ -4537,3 +4537,33 @@ img {
   .premium-bottom-bar { right: 15px !important; bottom: 15px !important; padding: 8px !important; }
   .premium-bottom-bar .btn-whatsapp { font-size: 1.1rem !important; padding: 14px 22px !important; }
 }
+
+/* ============================================================
+   PERFECT EDGE-TO-EDGE VIDEO
+   ============================================================ */
+.perfect-fit-video {
+  width: 100vw !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-top: 70px !important; /* Start exactly below navbar */
+  line-height: 0 !important; /* Removes gap at bottom of video */
+  background: #FDF4E3 !important;
+  overflow: hidden !important;
+}
+
+.perfect-fit-video .edge-video {
+  width: 100vw !important;
+  height: calc(100vh - 70px) !important; /* Fill exactly the remaining screen */
+  object-fit: cover !important; /* Edge-to-edge fit, no cream borders! */
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .perfect-fit-video {
+    margin-top: 60px !important;
+  }
+  .perfect-fit-video .edge-video {
+    height: 60vh !important; /* On mobile, 60vh keeps the text centered and avoids cutting off too much width */
+  }
+}
