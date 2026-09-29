@@ -4772,3 +4772,11 @@ img {
     flex-wrap: wrap !important;
   }
 }
+
+/* ============================================================
+   REMOVE BLUR FROM VIDEO OVERLAY
+   ============================================================ */
+.video-overlay {
+  backdrop-filter: none !important;
+  background: rgba(253, 244, 227, 0.15) !important; /* Extremely light tint just for text contrast, completely clear video */
+}
