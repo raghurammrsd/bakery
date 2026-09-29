@@ -4606,3 +4606,25 @@ img {
     max-height: auto !important; /* Let it wrap the aspect ratio perfectly */
   }
 }
+
+
+/* Ensure the hero section stacks the video and buttons vertically */
+.promo-video-section {
+  flex-direction: column !important;
+  padding-bottom: 30px !important;
+}
+
+.promo-video-section .hero-btns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .promo-video-section .hero-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+}
